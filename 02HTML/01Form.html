@@ -9,13 +9,21 @@
 <body>
     <!-- 폼태그 : server로 client 정보 전달위해 사용 -->
     <!--  서버의 특정 페이지로 입력한 정보를 전달함 -->
+    <!-- 
+        action : 서버수신페이지
+        method : 서버로 전달방식
+        (get : URL 실어서 ~ , post : request body 에 실어서 전달)
+    -->
     <form action="memberjoin.jsp" method="get">
+        <!-- 폼태그 자체가 서버로 전달할건데 맴버조인.jsp를 입력한 정보를 전달함  / 전달방식은 매서드에 get방식으로 전달 -->
+        <!-- get방식은 인증방식에서는 노출되지 않음 (정보유출) / 장바구니 등등 다른정보나 중요하지않은 정보들에 할때 씀 / 키워드 장바구니 -->
         <label>이름</label>: <input type="text" name="name"><br>
+        <!-- " 네임"이라는 변수명 안에 값이 입력됨 -->
         <label>나이</label>: <input type="text" name="age"><br>
         <label>주소</label>: <input type="text" name="addr"><br>
         <label>성별</label>: <input type="text" name="gender"><br>
         <input type="submit" value="전송">
-
+<!-- 홈태그 안에는 데이터를 입력받을수있게하는 input이라는 입력값이 있음  -->
 
     </form>
 </body>
