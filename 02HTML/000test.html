@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원정보</h1>
+    
+    <table>
+        <form>
+            <fieldset style="width: 800px;">
+                <legend style="font: size 32px; ">인적사항</legend>
+                이름 : <input>
+                주민번호 : <input>-<input><br>
+                국적 : <select name="country">
+                    <option value="korea">내국인(대한민국)</option>
+                    <option value="foreign">외국인</option>
+                </select>
+                취득자격증 : <select name="certificate" size="1" multiple>
+                    <option value>정보처리기사</option>
+                    <option value>정보처리산업기사</option>
+                    <option value>정보처리기능사</option>
+                    <option value>컴활</option>
+                </select>
+                
+            </fieldset>  
+
+
+
+            <fieldset style="width: 800px;">
+                <legend style="font: size 32px; ">성별&학번</legend>
+                성별 : 
+                <input type="radio" name="gender" value="male"> 남성&nbsp;
+                <input type="radio" name="gender" value="female">여성
+                <br>
+
+                학년: 
+                <input type="radio" name="year" value="1"> 1학년
+                <input type="radio" name="year" value="2"> 2학년
+                <input type="radio" name="year" value="3"> 3학년
+                <input type="radio" name="year" value="4"> 4학년
+                 
+                
+            </fieldset>  
+
+            <fieldset style="width: 800px;">
+                <legend style="font: size 32px; ">취미</legend>
+                <input type="checkbox" name="hobby" value="reading"> 독서
+                <input type="checkbox" name="hobby" value="reading"> 바둑
+                <input type="checkbox" name="hobby" value="reading"> 골프
+                <input type="checkbox" name="hobby" value="reading"> 등산
+                <input type="checkbox" name="hobby" value="reading"> 여행
+                <input type="checkbox" name="hobby" value="reading"> 기타
+                 
+                
+            </fieldset>  
+
+            <fieldset style="width: 800px;">
+                <legend style="font: size 32px; ">메모사항</legend>
+                <textarea rows="10" cols="107" placeholder="메모글을 남겨주세요" >
+                </textarea>   
+                 
+                
+            </fieldset>  
+            첨부서류 : 
+            <input type="file">
+            <hr style="width:810;" align="left">
+            <button>저장하기</button>
+            <button>다시입력하기</button>
+        </form>
+    
+    </table>
+</body>
+</html>

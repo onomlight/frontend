@@ -15,6 +15,7 @@
         (get : URL 실어서 ~ , post : request body 에 실어서 전달)
     -->
     <form action="memberjoin.jsp" method="get">
+        <!-- method = post 일경우 url에 정보 노출안됨 -->
         <!-- 폼태그 자체가 서버로 전달할건데 맴버조인.jsp를 입력한 정보를 전달함  / 전달방식은 매서드에 get방식으로 전달 -->
         <!-- get방식은 인증방식에서는 노출되지 않음 (정보유출) / 장바구니 등등 다른정보나 중요하지않은 정보들에 할때 씀 / 키워드 장바구니 -->
         <label>이름</label>: <input type="text" name="name"><br>
