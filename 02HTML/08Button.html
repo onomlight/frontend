@@ -5,8 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <!-- 기본버튼 -->
+    <button onclick="alert('버튼1 클릭함')" class="btn btn-primary">버튼1</button>
+    <!-- onclick 이라는 자바스크립트 코드를 입력하면  자바스크립트가 들어감 -->
+    <hr>
+    <!-- Input type = button -->
+    <input type="button" value="버튼2" onclick="alert('버튼2클릭함!')" class="btn btn-danger">
+    <hr>
+    <!-- 기본버튼 + a 태그 (다른url로 들어가게해준느거)-->
+    <a href="http:www.naver.com" target="_blank">
+        <button>버튼3</button>
+    </a>
+    <hr>
+    <!-- 이미지 버튼 -->
+    <form action="" method="get">
+        이름 : <input type="text" name="name"><br>
+        나이 : <input type="text" name="age" ><br>
+         <input type="image" src="check-solid.svg" name="image" width="20px" height="20px"><br>
+        <!-- <input type="submit" value="전송"> -->
+    </form>
+
+    <!-- 이미지버튼 [a태그] -->
+    <a href="http:naver.com">
+        <img src="다운로드.png" width="50px" height="50px" border="1">
+    </a>
+    <!-- 위에는 폼태그여서 서버로 내용을 전달하기위한것들이고 , 밑에 이미지 a 태그는 단순 페이지 이동 -->
 </body>
 </html>
+
+<!-- 
+                                    버튼만드는 방법
+                                버튼 태그를이용한다
+                                인풋타입을 이용한다
+                                이미지 버튼을 만들수있다
+                                서버를 대체해서 만들수있다
+                                이미지 코드를 대체해서 만들수있다.
+ -->
