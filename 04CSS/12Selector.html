@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 3px;
+            border: 1px solid gray;
+        }
+        /* c1안의 모든 p태그 중에 첫번째 자식p태그만  */
+        /* .c1 p:first-child{
+            background-color: orange;
+            
+        } */
+        /* c1안의 모든 p태그 중에 마지막 자식p태그만  */
+        /* .c1 p:last-child{
+            background-color: green;
+        } */
+        /* c1안의 모든 p태그중 홀수 태그만 */
+        .c1 p:nth-child(2n-1){
+            background-color: yellow;
+        }
+    </style>
+    <h1>제목</h1>
+    
+    <div class="c1" style="border: 5px solid blue;">
+        <p>첫번째 div태그 내에 있는 문장 1 입니다</p>
+        <div class="c2" style="border: 7px solid red;">
+            <p>두번째 div태그 내에 있는 문장 1 입니다</p>
+            <div class="c3" style="border: 9px solid green;">
+                <p> 세번째 div안의 문장1 입니다.</p>
+                <p> 세번째 div안의 문장2 입니다.</p>
+                <p> 세번째 div안의 문장3 입니다.</p>
+            </div>
+            <p>두번째 div태그 내에 있는 문장 2 입니다</p>
+            <p>두번째 div태그 내에 있는 문장 3 입니다</p>
+        </div>
+        <p>첫번째 div태그 내에 있는 문장 2 입니다</p>
+        <p>첫번째 div태그 내에 있는 문장 3 입니다</p>
+    </div>
+
+</body>
+</html>
+
+
+ 
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        전체 선택자, HTML 요소선택자,ID선택자,클래스선택자,그룹선택자
+     -->
+     <style>
+         *{
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             border: 1px solid gray;
+             /* 처음에는 전체선택자에 보더잡고 하면 감잡기편함 */
+         }
+         /* html 요소선택자 */
+         h1{
+             background-color: antiquewhite;
+         }
+         /* id선택자 : !중복이되도록 설정하면안됨! 유일한값을 구분하게 해야함 ! 아이디는 # 으로 지정함 */
+         #test1{
+            background-color: aqua;
+         }
+         /* 클래스선택자 : 클래스는 . 으로 지정함 */
+         .item{
+            background-color: blueviolet;
+         }
+         /* 그룹선택자 : 여러선택자들을 묶어서 선택할수있음 */
+         h1,#test1,.item{
+             margin: 0px 20px;
+         }
+     </style>
+    <h1>HELLOWORLD</h1>
+    <h2 id="test1">HELLOWORLD</h2>
+    <h3 class="item">HELLOWORLD</h3>
+    <h4 class="item">HELLOWORLD</h4>
+    <h5 class="item">HELLOWORLD</h5>
+    <h6>HELLOWORLD</h6>
+
+</body>
+</html>

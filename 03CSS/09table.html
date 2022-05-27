@@ -8,12 +8,12 @@
 </head>
 <body>
     <style>
-        *{
+        /* *{
             /* border: solid gray;
             margin: 5px; */
             
         
-        }
+        /* } */
         table{
             width: 100%;
             height: 300px;
@@ -72,6 +72,22 @@
             width: 60%;
             margin: 100px auto;
         }
+        #id1{
+            outline:1px solid black;
+            /* border: 5px dashed black; */
+        }
+        #id1:focus{
+            border: 1px solid blue;
+            outline: 0px dashed gray;
+        }
+        #y #p #e{
+            outline:1px solid black;
+            
+        }
+        table tr:hover{
+            background-color: gray;
+        }
+         
     </style>
 
     <div id="title">비밀번호 찾기</div>
@@ -89,33 +105,40 @@
     <table>
         <tr>
             <td>웹아이디</td>
-            <td colspan="3">2</td>
+            <td colspan="3"><input id="id1"></td>
             <!-- <td>3</td>
             <td>4</td> -->
         </tr>
         <tr>
             
             <td>생년월일</td>
-            <td>6</td>
+            <td><input id="y"><input id="y"><input id="y"></td>
             <td>성별</td>
-            <td>8</td>
+            <td> <label for="man">남자</label>
+                <input type="radio" name="gender" value="m" id="man">
+                <label for="woman">여자</label>
+                <input type="radio" name="gender" value="m" id="woman"></td>
         </tr>
         <tr>
            
             <td>전송방법</td>
-            <td colspan="3">10</td>
+            <td colspan="3">   
+                <label for="E-mail">가입 시 이메일</label>
+                <input type="radio" name="check" value="E" id="mail">
+                <label for="phone">가입 시 휴대전화</label>
+                <input type="radio" name="check" value="p" id="phone"> </td>
             <!-- <td>11</td>
             <td>12</td> -->
         </tr>
         <tr>
             <td>가입 시 이메일</td>
-            <td colspan="3">14</td>
+            <td colspan="3"><input id="e">@<input id="e"></td>
             <!-- <td>15</td>
             <td>16</td> -->
         </tr>
         <tr>
             <td>가입 시 휴대전화</td>
-            <td colspan="3">18</td>
+            <td colspan="3"><input id="p">-<input id="p">-<input id="p"></td>
             <!-- <td>19</td>
             <td>20</td> -->
         </tr>

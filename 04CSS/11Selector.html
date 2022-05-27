@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        input[type='text']{
+            border: 0px;
+            outline: 2px dashed orange;
+            margin: 15px;
+            display: inline-block;
+            height: 30px;
+        }
+        input[type='text']:disabled{
+            background-color: bisque;
+            outline: 1px solid red;
+        }
+        /* 체크를 했을때 없애기 */
+        /* input[type='checkbox']:checked + input[type='text']{
+            visibility: hidden;
+        } */
+         /* 체크해제 했을때 보여주기 (1) */
+        input[type='text']{
+            visibility: hidden;
+        }
+       
+        input[type='checkbox']:checked + input[type='text']{
+            visibility: visible;
+        }
+        /* 체크해제 했을때 보여주기 (2) */
+        input:not([type='checkbox']:checked) + input[type='text']{
+            visibility: hidden;
+        }
+    </style>
+    
+
+
+    <input type="checkbox">
+    <input type="text"><br>
+
+    <input type="checkbox">
+    <input type="text" disabled><br>
+
+    <input type="checkbox">
+    <input type="text"><br>
+
+    <input type="checkbox">
+    <input type="text" disabled><br>
+    <!-- <script src="http:code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $("input[type='checkbox;]").click(function()){
+            alert("체크됨")
+        }
+    </script> -->
+</body>
+</html>
