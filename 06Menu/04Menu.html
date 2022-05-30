@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            /* margin: 5px;
+            border: 1px solid gray; */
+            font-family: '맑은 고딕';
+            font-weight: 700;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        ul{
+            list-style: none; 
+            padding: 0px;
+            width: 100%;
+            margin: 0px;
+        }
+        #wrapper{
+            width: 100%;
+            
+        }
+        #topmenu{
+            display: flex;
+            align-items: center;
+            justify-content: space-around ;
+            height: 100px;
+            line-height: 100px;
+            border-top: 1px solid gray;
+            /* 메뉴 윗줄 선 */
+            border-bottom: 1px solid lightgray;
+            /* 밑줄 선 */
+            position: relative;
+            left: 0px;
+            top: 0px;
+            padding-left: 15%;
+            padding-right: 15%;
+            
+
+        }
+        img{
+            width: 100%;
+        }
+        #logo{
+            margin-top: 25px;
+            /* 로고 위치 떨어트리기 */
+            
+            
+        }
+        .menu1{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            left: 0px; top: 0px;
+        }
+        .menu1>li{
+            /* width: 150px; */
+            /* 메뉴 간격 떨어트리기 */
+        }
+        .menu2{
+            display: none;
+        }
+        .menu1>li:hover{
+            border-bottom: 2px solid blue;
+            height: 100px;
+        }
+        .menu1>li:hover .menu2{
+            /* 메뉴 1에 있는 리스트를 마우스를 가져다됫을때 메뉴2가 행동하겟다 */
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 0px;
+            top: 70px;
+            width: 100%;
+            height: 150px;
+            border: 1px solid gray;
+            box-shadow: 10px 0px 30px gray;
+            
+
+        }
+        .menu1>li:hover .menu2>ul{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-left: -9% ;
+        }
+       .menu2 p {
+           font-size: 26px;
+           position: relative;
+            left: -11%;
+            top: -5%;
+       }
+    </style>
+    
+
+    <div id="wrapper">
+        <div id="topmenu">
+            <!-- 로고 -->
+            <div id="logo">
+                <img src="http://www.koreaitjob.co.kr/renewal2021/img/common/logo_header.png">
+            </div>
+            <!-- nay 메뉴 시작 -->
+            <ul class="menu1">
+                <!-- item1 -->
+                <li>
+                    
+                    <a href="#">아카데미소개</a>
+                    
+                    <ul class="menu2">
+                        <p>SubTitle</p>    
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">it교육과정</a>
+                    
+                    <ul class="menu2">
+                        <p>SubTitle</p>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">국비지원과정</a>
+                    
+                    <ul class="menu2">
+                        <p>SubTitle</p> 
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    
+                    <ul class="menu2">
+                        <p>SubTitle</p>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">프로젝트</a>
+                    
+                    <ul class="menu2">
+                        <p>SubTitle</p>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">취업지원제도</a>
+                    
+                    <ul class="menu2">
+                        <p>SubTitle</p>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객상담</a>
+                    
+                    <ul class="menu2">
+                        <p>SubTitle</p>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+</html>

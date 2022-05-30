@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        postiton : 박스의 위치를 지정
+        static(기본) : viewport의 순서대로 박스를 연결
+        relative : 특정 HTML요소를 기본위치로 잡고 그 위치를 기준으로 현재박스 위치를 지정(상대위치)
+        absolute : 특정 HTML요소를 기본위치로 잡고 그 위치를 기준으로 현재박스 위치를 지정(절대위치) 
+        fixed : 뷰포트(viewport)를 기준으로 위치 설정
+     -->
+     <style>
+         body{
+             margin: 0px;
+         }
+         div{
+             width: 150px;
+             height: 100px;
+             border: 2px solid gray;
+         }
+         #b1{
+             position: relative;
+             /* 포지션을 릴렉티브로 잡히게 되면 특정한 박스가 r/a로 포지션이 잡힘
+                뷰포트 기준으로 위치 선택이 가능함
+             */
+             left: 200px;
+             top: 50px;
+         }
+         #b2{
+             position: relative;
+             left: -20px;
+             top: -20px;
+         }
+         #b3{ position: relative; left: 100px; top: 20px;}
+         #b4{ position: relative; left: 100px; top: 20px;}
+     </style>
+
+     <div id="b1">1</div>
+     <div id="b2">2</div>
+     <div id="b3">3</div>
+     <div id="b4">4</div>
+<!-- 순서대로 싸임 -->
+</body>
+</html>

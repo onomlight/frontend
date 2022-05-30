@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .menu-level1{
+            /* border: 1px solid gray; */
+            padding: 0px;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .menu-level1>li{
+            /* border: 1px solid red; */
+            /* 자식선택자 잡아서 확인 */
+            width: 200px;
+        }
+        .menu-level2{
+            list-style: none;
+            padding: 0px;
+            border: 1px gray;
+            display: none;
+            line-clamp: 1px solid gray;
+        }
+        .level-li>a:hover .menu-level2{
+            display: block;
+        }
+        .menu-level1>li:hover .menu-level2{
+            display: block;
+        }
+        
+    </style>
+    <ul class="menu-level1">
+
+        <li class="level-li">
+            <a href="#">수술알레르기클리닉</a>
+            
+            <ul class="menu-level2">
+                <li><a href="#">네비게이션 축농증 수술</a></li><hr>
+                <li><a href="#">내시경 비충격 수술</a></li><hr>
+                <li><a href="#">알레르기 비염 클리닉</a></li><hr> 
+                <li><a href="#">코골이수면무호흡</a></li><hr>
+                <li><a href="#">기능성 코성형</a></li><hr>
+                <li><a href="#">편도결석 구취 클리닉</a></li><hr>
+                <li><a href="#">갑상선두경부클리닉</a></li><hr>
+                <li><a href="#">중이염 수술 클리닉</a></li><hr>
+            </ul>
+            
+        </li>
+        <li class="level-li">
+            <a href="#">어지럼증 클리닉</a>
+            
+            <ul class="menu-level2">
+                <li><a href="#">어지럼증 클리닉</a></li><hr>
+                <li><a href="#">어지럼증 수액 클리닉</a></li><hr>
+                <li><a href="#">이명난청보청기</a></li><hr>
+                
+            </ul>
+            
+        </li>
+        <li class="level-li">
+            <a href="#">상담진료문의</a>
+            
+            <ul class="menu-level2">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+            </ul>
+            
+        </li>
+        <li class="level-li">
+            <a href="#">더원소개</a>
+            
+            <ul class="menu-level2">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+            </ul>
+            
+        </li>
+        <li class="level-li">
+            <a href="#">미디어속의 더원</a>
+            
+            <ul class="menu-level2">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+            </ul>
+            
+        </li>
+        <li class="level-li">
+            <a href="#">병원후기</a>
+            
+            <ul class="menu-level2">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+            </ul>
+            
+        </li>
+
+    </ul>
+    
+</body>
+</html>
