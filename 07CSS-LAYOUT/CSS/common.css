@@ -1,0 +1,15 @@
+*{
+    
+    border: 1px solid gray;
+    margin: 3px;
+}
+
+
+body{
+    width: 85%;
+    margin: 0px auto;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+}
