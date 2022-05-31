@@ -4,118 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>라루셀</title>
-    <style>
-      
-        .li2{
-            /*  안에 li 스타일 없앰 */
-            list-style: none;
-            display: flex;
-            
-            justify-content: space-between;
-            padding: 0px;
-        }
-        .topmenu2{
-            list-style: none;
-            /* 탑메뉴2에 속한 리스트 지우기 */
-            padding: 0px;
-            border: 1px solid gray;
-            display: none;
-            line-clamp: gray;
-            }
-        .d1{
-            display: flex;
-            justify-content: center;
-            background-color: gray;
-            height: 50px;
-            line-height: 50px;
-            padding: 0px;
-            text-align: center;
-            left: 15%;
-            right: 15%;
-            
-
-        }
-        .d1 > li{
-            width:150px;
-            margin:0px auto;
-            margin-left: 10%;
-            margin-right: 8%;
-        }
-        /* li2 == level-li  d1==menu-level1    topmenu2 == menu-level2 */
-        .li2>a:hover .topmenu2{
-            display: block;
-        }
-        .d1>li:hover .topmenu2{
-            display: block;
-        }
-        a{
-            text-decoration: none;
-            color: black;
-        }
-        .li2{
-            
-            position: relative;
-        }
-        .topmenu2{
-            top: 70%;
-            position: absolute;
-        }
-       
-        
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div class="logo">
-        <img src="http://lalucell.com/web/upload/category/editor/2022/01/18/bb50dd5be6f53f9376588ed4019b19aa.png" alt="">
-    </div>
+    <style>
+        ul{
+            list-style: none;
+            padding-left: 0px;
+        }
+        /* depth2를 고정위치로 */
+        /* .depth1{
+            position: relative;
+            left: 0px;
+            top: 0px;
+            width: 150px;
+        } */
+        .depth1>li{
+            width: 150px;
+            height: 50px;
+            border: 1px solid gray;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            
+        }
+        .depth2{
+            position:absolute;
+            left: 100%;
+            right: 0px;
+            top: -1px;
+            border: 1px solid gray;
+            display: none;
+        }
+        .depth1 >li:hover .depth2{
+            display: block;
+        }
+        .depth3{
+           display: none;
+        }
+        .depth2>li:hover .depth3{
+            position: absolute;
+            left: 100%;
+            top: 0px;
+            display: block;
+            border: 1px solid gray;
+        }
+    </style>
 
-<!-- 
--->
+    <ul class="depth1">
+        <li>
+            <a href="#">Menu1</a>
+            <ul class="depth2">
+                <li>
+                    <a href="#">SubMenu1</a>
+                    <ul class="depth3">
+                        <li>3dpthMenu</li>
+                        <li>3dpthMenu</li>
+                        <li>3dpthMenu</li>
 
-    
-        <div class="topmenu">
-            <ul class="d1">
-                <li class="li2">
-                        <a href="#">브랜드스토리</a>
-                        <ul class="topmenu2">
-                            <li >  <a href="#">브랜드 스토리</a>      </li>
-                            <li ><a href="#">라루셀 연구소</a></li>
-                            <li ><a href="#">카카오톡 바로가기</a></li>
-                    </li>        
-                </ul>
-                <li class="li2" >
-                    <a href="#">제품유형별</a>
-                    
-                    <ul class="topmenu2">
-                        <li class="d2"><a href="#">데일리케어SET</a></li>
-                        <li ><a href="#">에센스/앰플</a></li>
-                        <li><a href="#">로션/크림</a></li>
-                        <li ><a href="#">토너</a></li>
-                        <li> <a href="#">마스크팩</a></li>
-                </li>   
-                </ul>
-                    <li class="li2">
-                    <a href="#">피부고민별</a>
-                        <ul class="topmenu2">
-                            <li ><a href="#">민감/진정</a></li>
-                            <li ><a href="#">수분/보습</a></li>
-                            <li ><a href="#">지성/모공</a></li>
-                            <li ><a href="#">트러블</a></li>
-                            <li ><a href="#">화이트닝</a></li>
-                        </ul>
-                    </li>
-                    <li class="li2">
-                        <a href="#">이벤트</a>
-                        <ul class="topmenu2">
-                            <li ><a href="#">진행중인 이벤트</a></li>
-                            <li ><a href="#">종료된 이벤트</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                    </ul>
+                </li>
+                <li>SubMenu1</li>
+                <li>SubMenu2</li>
+                <li>SubMenu3</li>
+                <li>SubMenu4</li>
             </ul>
-        </div>
+        </li>
+        <li>
+            <a href="#">Menu1</a>
+            <ul class="depth2">
+                <li>SubMenu5</li>
+                <li>SubMenu6</li>
+                <li>SubMenu7</li>
+                <li>SubMenu8</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu1</a>
+            <ul class="depth2">
+                <li>SubMenu9</li>
+                <li>SubMenu10</li>
+                <li>SubMenu11</li>
+                <li>SubMenu12</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu1</a>
+            <ul class="depth2">
+                <li>SubMenu13</li>
+                <li>SubMenu14</li>
+                <li>SubMenu15</li>
+                <li>SubMenu16</li>
+            </ul>
+        </li>
 
-    
+    </ul>
 </body>
 </html>
