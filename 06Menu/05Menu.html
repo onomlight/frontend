@@ -1,156 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- BS5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+ 
     <title>Document</title>
 </head>
 <body>
+
     <style>
-        *{}
+        *{
+         
+        }
         body{
-            margin: 0px;
-            background-color: chocolate;
+            margin:0px;
+            background-color:chocolate;
+
         }
         #wrapper{}
         #topmenu{
-            display: flex;
-            align-items: center;
+            display:flex;
+            align-items:center;
+            text-align:center;
+            
+            padding:1% 5%;
+            position:relative;
+            width:100%;
+            left:0px;
+            top:0px;    
+            background-color:white;
+            /* border:1px solid gray; */
         }
-        #topmenu{
-            display: flex;
-            align-items: center;
-            text-align: center;
-            padding-left: 5%;
-            padding-right: 5%;
-            position: relative;
-            left: 0px;
-            top: 0px;
-            background-color: white;
-
-        }
-        /* #topmenu .tiem{
-            width: 100%;
-        } */
         #logo{
-            width: 10%;
+            width:10%;
         }
         ul{
-            list-style: none;
-            padding: 0px;
+            list-style:none;
+            padding:0px;
         }
         #depth1{
-            width: 60%;
-            display: flex;
+            width:50%;
+            display:flex;
             justify-content: space-between;
-            margin-bottom: 0px;
-            position: absolute;
-            left: 20px;
-            top: 40px;
-        }
-        #depth1>li{
-            width: 150px;
+            margin-bottom:0px;
+            position:absolute;
+            left:20%;
+            top:40%;
         }
         #quick{
-            width: 90%;
-            text-align: right;
-            margin-left: 5%;
+            width:90%;
+            text-align:right;
+            /* margin-left:5%; */
         }
+
+        #depth1>li{
+            width:150px;
+        }
+        #depth1 a{
+            display:block;
+            text-decoration: none;
+            color:black;
+            
+            height: 77px;
+        }
+        
+      
         .depth2{
-            display: none;
-        }
-        #depth1:hover .depth2{
-            display: block;
-            /* 포지션이 없어서 계속위치가 이동함 */
-            position: relative;
-            left: 0px;
-            top: 25%;
-            /* border: 1px solid gray; */
+            display:none;
         }
         .depth2>li{
-            margin: 10px auto;
+            margin:10px auto;
         }
-        #depth1:hover{
-            height: 500px; ;
+
+        #depth1:hover .depth2{
+            display:block;
+            position:relative;
+            left:0px;
+            top:5%;
+            /* border : 1px solid gray; */
         }
-        .depth1>a{
-            display: block;
-            text-decoration: none;
-            color: black;
-            border: 1px solid gray;
+        #depth1>li:hover a{
+            border-bottom:3px solid orange;
         }
+        #topmenu:hover{
+            border-bottom:1px solid lightgray;
+        }
+    
+
         #modal{
-            
-        background-color: white;
-        width: 100%;
-        height: 300px;
-        position: relative;
-        left: 0px;
-        top: 0px;
-        z-index: -1;
+         
+            display:none;
+            background-color:white;
+            width:100%;
+            height:300px;
+            position:absolute;
+            left:0px;
+            top:100%;
+            z-index:-1;
         }
-        #depth1:hover #modal{
-            display: block;
+        #topmenu:hover #modal{
+            display:block; 
         }
+
+  
+
+        /* 반응형 웹 만들기(모바일) 대충~*/
+        @media screen and (max-width: 992px) {
+            #quick{display:none;}
+            #depth1{width:70%;}
+            #depth1 a{
+           
+            height: 65px;
+        }
+        }
+        @media screen and (max-width: 768px) {
+	    /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+            #depth1{ display:none;}
+            #quick{display:none;}
+            #modal{display:none;}
+            #hambuger{display:block;   width:50px;
+                height:50px;}
+            #hambuger>img{
+                width:100%;
+            }
+        }
+
+
     </style>
     <div id="wrapper">
         <div id="topmenu">
-            <div id="logo" class="item" ><img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" ></div>
-            <ul id="depth1" class="item">
+            <div id=logo class="item" ><img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png"></div>
+            <!--  -->
+            <ul id=depth1 class="item">
                 <li>
-                    Menu
+                    <a href="">Menu</a>
                     <ul class="depth2">
                         <li>버거</li>
                         <li>맥런치</li>
                         <li>맥모닝</li>
                         <li>해피스낵</li>
                         <li>사이드&디저트</li>
-                        <li>맥카페&음료</li>
+                        <li>맥까페&음료</li>
                         <li>해피밀</li>
                     </ul>
                 </li>
                 <li>
-                    Store
+                    <a href=""> Store</a>
                     <ul class="depth2">
-                        <li>서브메뉴1</li>
-                        <li>서브메뉴2</li>
-                        <li>서브메뉴3</li>
-                        <li>서브메뉴4</li>
+                        <li>submenu1</li>
+                        <li>submenu2</li>
+                        <li>submenu3</li>
+                        <li>submenu4</li>
+                        <li>submenu5</li>
                     </ul>
                 </li>
                 <li>
-                    What's New
+                    <a href=""> What's New</a>
                     <ul class="depth2">
-                        <li>서브메뉴1</li>
-                        <li>서브메뉴2</li>
-                        <li>서브메뉴3</li>
-                        <li>서브메뉴4</li>
+                        <li>submenu1</li>
+                        <li>submenu2</li>
+                        <li>submenu3</li>
+                        <li>submenu4</li>
+                        <li>submenu5</li>
                     </ul>
                 </li>
                 <li>
-                    Story
+                    <a href="">Story</a>
                     <ul class="depth2">
-                        <li>서브메뉴1</li>
-                        <li>서브메뉴2</li>
-                        <li>서브메뉴3</li>
-                        <li>서브메뉴4</li>
+                        <li>submenu1</li>
+                        <li>submenu2</li>
+                        <li>submenu3</li>
+                        <li>submenu4</li>
+                        <li>submenu5</li>
                     </ul>
                 </li>
-                <!-- modal -->
-                <div></div>
+               
             </ul>
-            <!-- QUICK -->
-            <div id="quick" class="item">
+
+            <!-- Quick -->
+            <div id=quick class="item">
                 <button class="btn btn-danger">임차문의</button>
                 <button class="btn btn-primary">RECRUIT</button>
                 <button class="btn btn-secondary">ENG</button>
                 
-            </div>
-        </div>    
+            </div
+            
+            <!-- Modal -->
+            <div id="modal" ></div>
+        </div>
         
+ 
     </div>
+    
 </body>
 </html>
