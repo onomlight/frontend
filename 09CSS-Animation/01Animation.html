@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            width: 400px;height: 40px;
+            border: 3px solid orange;
+            text-align: center;
+            line-height: 40px;
+        }
+        @keyframes moving1{
+         from{margin-left: 100%;}    
+         /* 시작점 */
+
+         to{margin-left: 0%;}
+         /* 끝위치 */
+
+        }
+        @keyframes moving2{
+            from{margin-top: 100%;}
+            to{margin-top: 0%;}
+        }
+        #d1{
+            animation-name: moving1;
+            animation-duration: 2s;
+        }
+        #d2{
+            animation-name: moving2;
+            animation-duration: 2s;
+        }
+        
+    </style>
+    <div id="d1">HelloWorld</div>
+    <div id="d2">HelloWorld</div>
+</body>
+</html>

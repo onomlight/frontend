@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            background-color: orange;
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+        @keyframes moving{
+            from{left: 0px;}
+            to{left: 1000px;}
+        }
+
+        #d1{
+            animation-name: moving; animation-duration: 2s;
+            /* 처음부터 끝까지 같은 속도 */
+            animation-timing-function: linear;
+        }
+        #d2{animation-name: moving; animation-duration: 2s;}
+        #d3{animation-name: moving; animation-duration: 2s;}
+        #d4{animation-name: moving; animation-duration: 2s;}
+        #d5{animation-name: moving; animation-duration: 2s;}
+        
+    </style>
+    <div id="d5"></div>
+    <div id="d4"></div>
+    <div id="d3"></div>
+    <div id="d2"></div>
+    <div id="d1"></div>
+    
+</body>
+</html>
