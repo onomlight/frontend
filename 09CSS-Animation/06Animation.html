@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+          div{
+            width:100px;height:100px;background-color: aqua;
+            margin:50px;
+        }
+        @keyframes moving{
+            from{margin-left:0%}
+            to{margin-left:50%}
+        }
+        #d1{
+            animation-name:moving;
+            /* 적용시간:2초동안 움직이겠다 */
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            /* 지연시간:3초후 실행 */
+            animation-delay:3s;
+        }
+        #d2{
+            /* 애니매이션명 , duration, timing, delay, direction */
+            animation: moving 2s ease-in-out 1s infinite alternate;
+        }
+    </style>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+</html>

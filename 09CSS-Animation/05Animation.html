@@ -23,21 +23,44 @@
         }
 
         #d1{
-            animation-name: moving; animation-duration: 2s;
+            animation-name: moving; animation-duration: 10s;
             /* 처음부터 끝까지 같은 속도 */
             animation-timing-function: linear;
+            
         }
-        #d2{animation-name: moving; animation-duration: 2s;}
-        #d3{animation-name: moving; animation-duration: 2s;}
-        #d4{animation-name: moving; animation-duration: 2s;}
-        #d5{animation-name: moving; animation-duration: 2s;}
+        #d2{
+            animation-name: moving; animation-duration: 10s;
+            /* 기본값,천천히->빨리짐->천천히 */
+            animation-timing-function: ease;
+
+        }
+        #d3{
+            animation-name: moving; animation-duration: 10s;
+            /* 천천히->빨라짐 */
+            animation-timing-function: ease-in;
+        }
+        #d4{
+            animation-name: moving; animation-duration: 10s;
+            /*  보통 - 천천*/
+            animation-timing-function: ease-out;
+            animation-iteration-count: 3;
+        }
+        #d5{
+            /* 천천 보통 천천 */
+            animation-name: moving; animation-duration: 10s;
+            /* animation-timing-function: ease-in-out; */
+
+            /* 끊어서 */
+            /* animation-timing-function: steps(10); */
+            animation-timing-function: cubic-bezier(1, 0.84, 0.44, 1);
+        }
         
     </style>
-    <div id="d5"></div>
-    <div id="d4"></div>
-    <div id="d3"></div>
-    <div id="d2"></div>
     <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
     
 </body>
 </html>
