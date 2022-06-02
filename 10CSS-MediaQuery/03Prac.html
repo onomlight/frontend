@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <style>
+        nav{
+            border: 1px solid gray;
+            height: 100px;
+            display: flex;
+            
+            
+        }
+        #logo{width: 120px;height: 80px; border: 1px solid gray;  background-color: antiquewhite;           
+        }
+        #menu{width: 70%; border: 1px solid gray; background-color: blueviolet;}
+        #quick{width:30%; border: 1px solid gray; background-color: coral;}
+        /* 테블릿일때(1024이하) quick 사라지게 */
+        /* 모바일일때(768이하) quick,menu사라지고 햄버거메뉴가 오른쪽에 배치되게하세요 */
+           /* 테블릿 */
+           @media screen and (max-width:1024px) {
+            nav{ background-color: green;
+            }
+            
+        }
+        /* 모바일 */
+        @media screen and (max-width:768px){
+            nav{
+                background-color: rebeccapurple;
+            }
+        }
+    </style>
+    <nav>
+        <div id="logo">LOGO</div>
+        <div id="menu">MENU</div>
+        <div id="quick">QUICK</div>
+    </nav>
+</body>
+</html>

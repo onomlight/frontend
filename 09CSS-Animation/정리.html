@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row-reverse;
+            /* 순서가 오른쪽으로 정렬 */
+            align-items: center;
+            justify-content: center;
+            /* 아이탬 컨탠츠는 수평배치로 가능함 */
+            position: relative;
+            /* 포지션 릴레티브 엡솔루트 // 릴레티브 기점으로 엡솔루트 이동이됨 */
+
+            /* 릴레티브 앱솔루트 하는거 보기 */
+            /*  포지션을 어떻게 잡냐에 따라 메뉴구조가 달라짐! */
+            
+        }
+        *{border: 1px solid gray;
+        margin: 10px;}
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+    <!-- 여기서 상위태그는 바디여서 플랙스로 설정시 플랙스로 일괄설정됨 // 가로배치할경우 상위태그로 만들어서 할것 -->
+    <!-- div 블럭형이라 설정가능  마진 4면이 다 넣을수있 패딩이 블럭안에 다 넣어짐 / display - inline으로 설정시 라인으로 변경가능-->
+    <!-- span 라인형이라 설정불가 좌우만 넣을 수 있음 / 라인안에만 패딩이 넣어짐 display-block 설정시 블럭으로 진행가능-->
+    <div>
+        div
+    </div>
+    <span>span</span>
+    
+</body>
+</html>
