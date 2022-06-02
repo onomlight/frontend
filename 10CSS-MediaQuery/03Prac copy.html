@@ -9,8 +9,8 @@
 </head>
 <body>
     <style>
-          #chk{
-              display:none;
+        #chk{
+          display:none;
           }
           #sitemenu span{
             display:block;
@@ -32,6 +32,13 @@
             opacity:0;
             transition: 0.5s;
         }
+
+        /* 햄버거 끝 */
+        #sitemenu{
+            display: none;
+            /* visibility:hieedn; */
+            /* 공간은 남아있음 */
+        }
         nav{
             border: 1px solid gray;
             height: 100px;
@@ -39,7 +46,7 @@
             
             
         }
-        #logo{width: 120px;height: 80px; border: 1px solid gray;  background-color: antiquewhite;           
+        #logo{width: 120px;height: 80px; border: 1px solid rgb(62, 58, 58);  background-color: antiquewhite;           
         }
         #menu{width: 70%; border: 1px solid gray; background-color: blueviolet;}
         #quick{width:30%; border: 1px solid gray; background-color: coral;}
@@ -54,17 +61,21 @@
         }
         /* 모바일 */
         @media screen and (max-width:768px){
-            nav{
-                background-color: rebeccapurple;
-            }
+            
             #menu{display: none;}
+            #sitemenu{display: block; width: 100%; margin-left: 60%; margin-top: 15px;}
+            #logo{width: 150px;}
+            
         }
     </style>
+
+
+
     <nav>
         <div id="logo">LOGO</div>
         <div id="menu">MENU</div>
         <div id="quick">QUICK</div>
-        <div style="display: none;">
+        <div id="sitemenu">
             <label  for="chk" id="sitemenu">
                 <span id="top"></span>
                 <span id="middle"></span>
