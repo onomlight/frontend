@@ -18,7 +18,12 @@
     <button onclick="func3()"> MOVING</button>
     <button onclick="func4()"> BACK</button>
     <button onclick="func5()"> init</button>
+    <button onclick="func6()"> UP</button>
+    <button onclick="func7()"> DOWN</button>
+    <button onclick="func8()"> LEFT</button>
+    <button onclick="func9()"> RIGHT</button>
     <hr>
+    <!-- <div style="width: 550px;height: 550px; border: 1px solid gray;"></div> -->
     <div id="d1"></div>
     <script>
         function func1(){
@@ -38,11 +43,13 @@
         let deg  = 0;
         function func3(){
             d1tg = document.getElementById("d1");
+            // if((xpos+100)>500 ||(ypos+100)>500 )
             d1tg.style.transform='translate('+(xpos+=100)+'px,'+(ypos+=100)+'px) rotate('+(deg+=180)+'deg)';
             // 한번클릭시 한번만이동됨
             d1tg.style.transition='1s';
         }
         function func4(){
+            // if((xpos-100)<0 ||(ypos-100)<0 )
             d1tg = document.getElementById("d1");
             d1tg.style.transform='translate('+(xpos-=100)+'px,'+(ypos-=100)+'px) rotate('+(deg+=180)+'deg)';
             // 한번클릭시 한번만이동됨
@@ -51,6 +58,30 @@
         function func5(){
             d1tg = document.getElementById("d1");
             d1tg.style.transform='translate('+(xpos=0)+'px,'+(ypos=0)+'px) rotate('+(deg+=180)+'deg)';
+            // 한번클릭시 한번만이동됨
+            d1tg.style.transition='1s';
+        }
+        function func6(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.transform='translate('+(ypos-100)+'px)';
+            // 한번클릭시 한번만이동됨
+            d1tg.style.transition='1s';
+        }
+        function func7(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.transform='translate('+(ypos+100)+'px)';
+            // 한번클릭시 한번만이동됨
+            d1tg.style.transition='1s';
+        }
+        function func8(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.transform='translate('+(xpos-100)+'px)';
+            // 한번클릭시 한번만이동됨
+            d1tg.style.transition='1s';
+        }
+        function func9(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.transform='translate('+(xpos+100)+'px)';
             // 한번클릭시 한번만이동됨
             d1tg.style.transition='1s';
         }

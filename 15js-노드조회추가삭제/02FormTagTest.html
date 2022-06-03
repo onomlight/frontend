@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        list-style: none;
+        padding-left: 0px;
+    }
+    #cat-outer{
+        width: 100px;
+        border: 1px solid gray;
+        display: flex;
+        justify-content: center;
+
+    }
+    img{
+        width: 100px;height: 100px;
+    }
+    #cat-outer>div{
+        width: 300px;
+        border: 1px solid gray;
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="cat-outer" class="winter">
+        <form name="frm0">
+            <ul>
+                <li><img src="gun.jpg" alt=""></li>
+                <li> Gun </li>
+                <li>품절</li>
+                <li><button onclick="ShowItemInfo(0)">Cart</button><button>buynow</button> </li>
+            </ul>
+        </form>
+    </div>
+    <div id="cat-outer" class="winter">
+        <form name="frm1">
+            <ul>
+                <li><img src="gun.jpg" alt=""></li>
+                <li> Gun </li>
+                <li>품절</li>
+                <li><button onclick="ShowItemInfo(1)">Cart</button><button>buynow</button> </li>
+            </ul>
+        </form>
+    </div>
+    <div id="cat-outer" class="winter">
+        <form name="frm2">
+            <ul>
+                <li><img src="gun.jpg" alt=""></li>
+                <li> Gun </li>
+                <li>품절</li>
+                <li><button onclick="ShowItemInfo(2)">Cart</button><button>buynow</button> </li>
+            </ul>
+        </form>
+    </div>
+    <script>
+        // 모든 폼 가져오기
+        formlist = document.forms;
+        function ShowItemInfo(idx){
+            formlist[idx][0]
+        }
+    </script>
+</body>
+</html>

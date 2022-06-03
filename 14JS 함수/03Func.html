@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{
+        width: 50px;height: 30px; border: 1px solid gray;
+    }
+    table{
+        margin: 5px;
+        display: inline-block;
+    }
+    caption{
+        height: 30px;
+        border: 1px solid gray;
+        width: 97%;
+        margin: 0px auto;
+    }
+</style>
+<div id="output"></div>
+<body>
+    <input id="dan"><button onclick="googoodan()">확인</button>
+    <hr>
+    <script>
+        let dan = 2;
+        for(dan = 2;dan<=9;dan++){
+            document.write("<table>");
+                document.write("<caption>"+dan+"단<caption>");
+                for(i=1;i<=9;i++){
+                    document.write("<tr>");
+                    document.write("<td>"+dan+"</td>");
+                    document.write("<td>"+i+"</td>");
+                    document.write("<td>"+(dan*i)+"</td>");
+                    
+                    document.write("</tr>");
+                }
+            document.write("</table>");
+
+        }
+    </script>
+</body>
+</html>

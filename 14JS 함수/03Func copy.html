@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            width: 50px;
+            height: 50px;
+            background-color: azure;
+            margin: 2px;
+        }
+       
+    </style>
+</head>
+<body>
+    <input type="text" id="dan"><button onclick="googoodan()">출력</button>
+    <hr>
+    <div id="output">
+
+    </div>
+    <script>
+        function googoodan(){
+            // input type=text id =dan 요소 찾기
+            let dan = document.getElementById('dan').value;
+            //  value 인 값을 넣어  단인 값인 애들의 입력값을 가지고올수있음 
+            let output = document.getElementById('output');
+
+            let set = document.getElementById('set');
+            //  html 코드 저장
+            // let code ;
+            let code ='<table>';
+            for(i=1;i<=9;i++){
+                
+                code+='<tr>';
+                    code+='<td>'+dan+'</td>';
+                    code+='<td>'+"X"+'</td>';
+                    code+='<td>'+i+'</td>';
+                    code+='<td>'+"="+'</td>';
+                    code+='<td>'+(dan*i)+'</td>';
+                code+='</tr>';
+            }
+            code +='</table>';
+            output.innerHTML=code;
+            alert(dan);
+            document.getElementById('dan').value = ' ';
+        }
+    </script>
+</body>
+</html>

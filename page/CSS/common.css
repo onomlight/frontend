@@ -1,15 +1,12 @@
 *{
-    
-    border: 1px solid gray;
-    margin: 3px;
+    border : 1px solid gray;
+    margin:5px;
 }
-
-
-body{
-    width: 85%;
-    margin: 0px auto;
+body:not(#banner-slider){
+    /* width:85%; */
+    /* margin:0px auto; */
 }
 ul{
-    list-style: none;
-    padding: 0px;
+    list-style:none;
+    padding:0px;
 }

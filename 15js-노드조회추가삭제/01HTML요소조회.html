@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. tagname
+    <ul>
+        <li>ITEM 1</li>
+        <li>ITEM 2</li>
+        <li>ITEM 3</li>
+        <li>ITEM 4</li>
+        <li>ITEM 2</li>
+        <li>ITEM 3</li>
+        <li>ITEM 4</li>
+
+    </ul> -->
+    <!-- <script> -->
+        <!-- //배열형
+        let li = document.getElementsByTagName('li');
+        alert(li.length);
+
+        // li[0].style.backgroundColor='orange'
+        // li[1].style.backgroundColor='red'
+        // li[2].innerHTML+='hhi'
+        for(i=0;i<li.length;i++){
+            li[i].style.backgroundColor='rgb('+(50*i)+','+(50*i)+','+(60*i)+')'
+            li[i].style.color='white'
+        } -->
+    <!-- // </script> -->
+    <!-- 
+        li태그가 3개 있는 ul태그를 만듭니다
+        자바스크립트 코드를 이용해서 prompt로 문자열을 3개 입력받아
+        각 li에 넣어주도록 합니다
+
+     -->
+     <!-- <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+     </ul>
+     <script>
+          var input = prompt("리스트에 적용할 값을 적어주세요");
+              let elements = document.querySelectorAll('#list li');
+
+
+            for(var i = 0; i < elements.length; i++)
+            {
+            
+                elements[i].innerHTML = input;
+            } -->
+
+
+     <!-- </script> -->
+
+
+     <!-- 2 form 태그 찾기 -->
+     <!-- form[0] -->
+     <form >
+         <input type="text"> 
+         <!-- formp[0][0] -->
+         <input type="password">
+         <!-- form[0][1] -->
+         <input type="checkbox">
+     </form>
+     <form >
+        <input type="text">
+        <!-- form [1][0] -->
+        <input type="password">
+        <!-- form[1][1] -->
+    </form>
+    <form name="frmtest">
+        <input type="text">
+        <input type="password">
+    </form>
+
+    <script>
+        // 모든 form을 가져옴
+        let forms = document.forms;
+        // alert('폼의 개수 : ' + forms.length)
+        forms[0][0].value="안녕하세요";
+        forms[0][1].value="1234";
+        forms[0][2].checked = 'true'
+
+        forms[1][0].value="helloworld";
+        forms[1][1].value="46549872456";
+        // form의 name으로 위치 찾기
+        frm=document.frmtest;
+        frm[0]='frmtest확인';
+
+    </script>
+</body>
+</html>
