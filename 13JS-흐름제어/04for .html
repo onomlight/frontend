@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul{list-style: none;padding: 0px;}
+        /* li{
+            width: 150px; height: 40px; background-color: aquamarine; margin: 5px;
+        } */
+        .depth1>li{
+            width: 200px; height: 50px;
+            margin: 2px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 50px;
+            
+        }
+        .depth2>li{
+            width: 200px; height: 30px;
+            line-height: 30px;
+            background-color: orange;
+            text-align: center;
+            margin: 2px;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            
+        }
+        /* .depth1>li:hover{opacity: 0.5;} */
+        .depth2{display: none;
+        position: relative;
+        left: 0px;
+        top: 0px;}
+        .depth1>li:hover+ .depth2{
+            display: block;
+        }
+    </style>
+    <script>
+        let lv1 = prompt("1depth : ");
+        let lv2 = prompt("2depth : ");
+        document.write("<ul class=depth1>");
+            for(let i=0;i<lv1;i++){
+                document.write("<li>MENU"+(i+1));
+
+                document.write("<ul class=depth2>");
+                    for(let j=0;j<lv2;j++){
+                        document.write("<li>SUBMENU"+(i+1)+"</li>");
+                    }
+                    document.write("</ul>");
+                    document.write("</li>")
+            }
+
+        document.write("</ul>");
+    </script>
+</body>
+</html>

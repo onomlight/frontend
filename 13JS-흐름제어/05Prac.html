@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        자바스크립트 코드를 이용해서
+        행의개수와 열의 개수를 받습니다
+        해당 행렬만큼의 테이블 만들어봅니다
+     -->
+     <style>
+         table{
+             border: 1px solid gray;
+         }
+         tr{
+             border: 1px solid red;
+            
+         }
+         td{
+             border: 1px solid 5px;
+            
+         }
+     </style>
+
+     <script>
+         let row = prompt("1depth : ");
+         let col = prompt("2depth : ");
+
+       
+        document.write("<table border='1px;'>")
+        for (let i = 0; i < row; i++) {
+            document.write("<tr height='50px'>");
+            for (let j = 0; j < col; j++) {
+                document.write("<td width='50px'>");
+                
+            }
+            document.write("</tr>")
+            document.write("</td>")
+            
+            
+        }
+        
+        document.write("</table>")
+    
+     </script>
+</body>
+</html>
