@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #d1{
+            width: 50px; height: 50px; background-color: gray;
+        }
+    </style>
+     <!-- 자바스크립트 코드를 만들어서 색변환 실행함 !  -->
+    <button onclick="func1()"> BG:ORANGE</button>
+    <button onclick="func2()"> GB:GRAY</button>
+    <button onclick="func3()"> MOVING</button>
+    <button onclick="func4()"> BACK</button>
+    <button onclick="func5()"> init</button>
+    <hr>
+    <div id="d1"></div>
+    <script>
+        function func1(){
+            // 평션이란 이름으로 내용 입력
+            //  d1태그의 백그라운드를 오렌지색으로 바꿈
+            d1tg = document.getElementById("d1");
+            d1tg.style.backgroundColor='orange';
+            // css 대시선이 있으면 자바스크립트에서는 다음문자는 대문자
+        }
+        function func2(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.backgroundColor='gray';
+        }
+        // x,y 누적시키는 변수
+        let xpos = 0;
+        let ypos = 0;
+        let deg  = 0;
+        function func3(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.transform='translate('+(xpos+=100)+'px,'+(ypos+=100)+'px) rotate('+(deg+=180)+'deg)';
+            // 한번클릭시 한번만이동됨
+            d1tg.style.transition='1s';
+        }
+        function func4(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.transform='translate('+(xpos-=100)+'px,'+(ypos-=100)+'px) rotate('+(deg+=180)+'deg)';
+            // 한번클릭시 한번만이동됨
+            d1tg.style.transition='1s';
+        }
+        function func5(){
+            d1tg = document.getElementById("d1");
+            d1tg.style.transform='translate('+(xpos=0)+'px,'+(ypos=0)+'px) rotate('+(deg+=180)+'deg)';
+            // 한번클릭시 한번만이동됨
+            d1tg.style.transition='1s';
+        }
+    </script>
+</body>
+</html>
