@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul{list-style:none; padding:0px;display:flex;justify-content: space-around;
+        }
+        ul>li{
+            border : 1px solid gray;
+            width : 90%;
+            margin : 5px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+            display:block;
+            background-color:azure;
+        }
+        #todolist{
+            border : 1px solid gray;
+            width :500px;height:500px;
+            margin:100px auto;
+            padding : 10px;
+        }
+        .doit{
+            width : 97%;
+            height:70%;
+            border : 1px solid gray;
+            margin:0px auto;
+            overflow:auto;
+        }
+        .done{
+            width : 97%;
+            height:70%;
+            border : 1px solid gray;
+            margin:0px auto;
+            overflow:auto;
+            display:none;
+        }
+        #txt{
+            width : 300px;
+            height:30px;
+            outline : none;
+            margin:5px;
+        }
+        .list{
+            margin :5px auto;
+            width : 95%;
+            /* height : 95%;
+            border : 1px solid #808080; */
+        }
+        td{
+            width:20px;
+            height:30px;
+            border : 1px solid gray;
+        }
+        .td1{}
+        .td2{width: 80%;}
+        .td3{}
+        #doing{}
+        #donelist{}
+    </style>
+
+    <div id="todolist">
+        <nav>
+            <ul>
+                <li><a  href="javascript:Showdoitlist();" >DoIt</a></li>
+                <li><a  href="javascript:Showdonelist();">Done</a></li>
+            </ul>
+        </nav>
+        <div>
+            <input type="text" id='txt' placeholder="할일을 적으세요"><button onclick="addlist()">ADD</button>
+            <!-- 클릭을 하면 addlist라는 함수가 존재하도록함 -->
+        </div> 
+        <!--  -->
+        <div class="doit" >
+            <table id="doing" class="list"></table>
+        </div>
+        <div class="done">
+            <table id="donelist"  class="list"></table>
+        </div>
+    </div>
+
+    <script>
+        let doit = document.getElementsByClassName('doit');
+        let done = document.getElementsByClassName('done');
+        
+        let doing = document.getElementById('doing');
+        let donelist = document.getElementById('donelist');
+
+        function Showdoitlist(){
+            doit[0].style.display='block';
+            done[0].style.display='none';
+        }
+        function Showdonelist(){
+            doit[0].style.display='none';
+            done[0].style.display='block';
+        }
+        // 리스트에 할일 추가
+        function addlist(){
+            // 입력된 txt
+            txttg = document.getElementById('txt');
+            if(txttg.value=="")
+            {
+                alert("할일을 입력하세요.");
+                return ;
+            }
+
+            newtr = document.createElement('tr');
+
+            newtd1 = document.createElement('td');
+            newtd1.setAttribute('class','td1');
+
+            newtd2 = document.createElement('td');
+            newtd2.setAttribute('class','td2');
+
+            newtd3 = document.createElement('td');
+            newtd3.setAttribute('class','td3');
+
+            intg = document.createElement('input'); //checkbox 용
+            intg.setAttribute('type','checkbox');
+            intg.setAttribute('onclick','check(this)');
+
+            sptg = document.createElement('span'); //내용 
+            sptg.innerHTML=txttg.value;
+            //  스펜태크에는 입력할수있도록
+            btn = document.createElement('button');
+            btn.innerHTML='X';
+            //  버튼 태그에는X 라는 값이 입력할수있도록 
+            btn.setAttribute('onclick','removelist(this)');
+            
+            //연결
+            newtd1.append(intg);
+            newtd2.append(sptg);
+            newtd3.append(btn);
+            //  각각의 td 태그안에 내용 입력 / 첫번째 입력 / 스팬 / 버튼을 다섯개로 연ㄹ결 
+            newtr.append(newtd1);
+            newtr.append(newtd2);
+            newtr.append(newtd3);
+            //  각각 tr 태그를 자식으로 연결함
+            doing.append(newtr);
+
+            txttg.value="";
+            // 입력했던 위치는 다시 비워줌
+        }
+        function check(chk){
+            // 체크된 / 해제된 위치의 행
+            trtg = chk.parentNode.parentNode
+
+
+            if(chk.checked==true){
+                // 체크된 상태(doing -> don 이동 )
+                // alert("체크됨!!");
+                donelist.append(trtg);
+            }else{
+                // 체크해제된 상태 (done -> doing 이동 )
+                
+                alert("체크해제됨!!")
+            }
+        }
+            function removelist(btn){
+                //tr
+                trtg = btn.parentNode.parentNode;
+       
+                trtg.remove();
+        }
+
+    </script>
+
+</body>
+</html>
