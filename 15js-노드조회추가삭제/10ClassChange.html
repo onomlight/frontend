@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        ul{list-style: none; padding: 0px; width: 150px;}
+        li{width: 150px; height: 30px; border: 1px solid gray;}
+        .item1{
+            background-color: aquamarine;
+        }
+        .item2{
+            background-color: chocolate;
+
+        }
+        .item3{
+            background-color: orange;
+        }
+    </style>
+    <button onclick="style1()">STYLE1</button>
+    <button onclick="style2()">STYLE2</button>
+    <button onclick="style3()">STYLE3</button>
+    <ul class="item1" id="menu">
+        <li >ITEM1</li>
+        <li>ITEM2</li>
+        <li>ITEM3</li>
+        <li>ITEM4</li>
+        <li>ITEM5</li>
+        <li>ITEM6</li>
+        <li>ITEM7</li>
+    </ul>
+    <script>
+        let menu = document.getElementById('menu');
+        function style1(){
+            menu.classList.remove('item2');
+            menu.classList.remove('item3');
+            menu.classList.add('item1');
+
+        }
+        function style2(){
+            //  중복될수있는 클래스 삭제 
+            menu.classList.remove('item1');
+            menu.classList.remove('item3');
+            // 지정클래스 추가
+            menu.classList.add('item2');
+        }
+        function style3(){
+            menu.classList.remove('item1');
+            menu.classList.remove('item2');
+            menu.classList.add('item3');     
+        }
+    </script>
+</body>
+</html>

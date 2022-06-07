@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class 조회 -->
+    <ul>
+        <li class="item">item</li>
+        <li>item</li>
+        <li class="item">item</li>
+        <li>item</li>
+    </ul>
+
+    <ul>
+        <li class="item">item</li>
+        <li>item</li>
+        <li class="item">item</li>
+        <li>item</li>
+    </ul>
+    <script>
+        let itemlist = document.getElementsByClassName('item');
+        alert('개수 : ' + itemlist.length);
+        // 아이템이란 이름을 가진 녀석들을 선별함
+
+        // for (tmp in ltemlist)
+        // // 0~n번째에 효과를 줄수 있음
+        // {
+        //     // tmp.style.backgroundColor='orange';
+        // }
+        for(i=0;i<itemlist.length;i++){
+            itemlist[i].style.color='red';
+        }
+    </script>
+</body>
+</html>
