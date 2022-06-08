@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1" style="width:200px; height:200px; border:1px solid gray;">
+        <h2>HELLOWORLD</h2>
+    </div>
+    <div id="d2" style="width:200px; height:200px; border:1px solid gray;"
+    onclick="this.innerHTML='<h2>Mouseover</h2>'" 
+    onmouseover="this.innerHTML='<h2>Mouseover</h2>'" 
+    onmouseleave="this.innerHTML='<h2>Mouseleave</h2>'" >
+        <h2>HELLOWORLD</h2>
+    </div>
+    <script>
+        let d1tg = document.getElementById('d1');
+        d1tg.addEventListener('click',function(){
+        // 펑션으로 해서 완성시키게되면 완성된 함수의 주소가 addeventlistener에게 됨 
+        // 기본적으로 제공하게되며 함수를 실행하게됨
+            this.innerHTML='<h2>Click!</h2>';
+        });
+        d1tg.addEventListener('mouseover',function(){
+            this.innerHTML='<h2>Mouseover!</h2>';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    KEYUP : <input type="text" id="t1"><br>
+    <p id="p1"></p>
+    <hr>
+    KEYDOWN : <input type="text" id="t2"><br>
+    <p id="p2"></p>
+    <hr>
+    KEYPRESS : <input type="text" id="t3"><br>
+    <p id="p3"></p>
+    <hr>
+    <script>
+        t1 = document.getElementById('t1');
+        t2 = document.getElementById('t2');
+        t3 = document.getElementById('t3');
+        p1 = document.getElementById('p1');
+        p2 = document.getElementById('p2');
+        p3 = document.getElementById('p3');
+        // keyup(손가락을 뗏을때)
+        t1.addEventListener('keyup',function(){
+
+            console.log(event.keyCode);
+            p1.innerHTML=event.keyCode;
+        })
+        // keydown
+        t2.addEventListener('keydown',function(){
+
+        console.log(event.keyCode);
+        p2.innerHTML=event.keyCode;
+        })
+        // keypress
+        t3.addEventListener('keypress',function(){
+
+        console.log(event.keyCode);
+        p3.innerHTML=event.keyCode;
+        })
+        
+         
+        //LEFT :37
+        //UP : 38
+        //RIGHT : 39
+        //DOWN : 40
+
+    </script>
+</body>
+</html>
