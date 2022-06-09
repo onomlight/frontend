@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <input id="txt"><button onclick="func1()">추가</button>
+    <hr>
+    <ul id="travel"></ul>
+    <script>
+        // JS -> JQ 로변경해보세요
+        // let travel = document.getElementById('travel');
+        let travel = $('#travel');
+                    
+        function func1(){
+        //   let newli = document.createElement('li');
+        //   let txttg = document.getElementById('txt');
+        //   newli.innerHTML=txttg.value;
+        //   travel.prepend(newli);
+        //   txttg.value="";
+            let value = $('#txt').val();
+            $('#travel').append('<li>'+value+'</li>')
+            $('#txt').val('');
+        }
+    </script>
+
+</body>
+</html>

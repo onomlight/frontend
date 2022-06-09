@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQ -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    
+    <div id="d1">Hello world</div>
+    <div id="d2" class="item">Hello world</div>
+    <div id="d3">Hello world</div>
+    <div id="d4" class="item">Hello world</div>
+
+    <script>
+        // 자바스크립트
+        document.getElementById('d1').style.backgroundColor='orange';
+        // JQ
+        $('#d2').css('background-color','red').css('color','white');
+        // d3찾아서 글자색을 blue
+        $('#d3').css('color','blue');
+        // d4찾아서 width:400,height:400,border:1px solid gray;
+        $('#d4')
+        .css('width','400px')
+        .css('height','400px')
+        .css('border','1px solid gray');
+
+        // 클래스
+        $('.item').css('font-size','3rem');
+    </script>
+
+</body>
+</html>

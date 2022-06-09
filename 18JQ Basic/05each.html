@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <script>
+        // 1 object
+        let obj1 = {'name':'hong','age':'44','height':'177.5','weight':'77'};
+        
+        //js
+        // for( key in obj1){
+        //     document.write('key : ' + key+"<br>");
+        //     document.write('value : ' +obj1[key]+"<br>");
+        // }
+
+        // jq
+        // 이거 맛집api로 추려낼수있음 ************************
+        // $.each(obj1,function(key,value){
+        //     document.write('K :'+key+',V : '+value+"<br>");
+        // })
+
+        // 2 object(배열형)
+        let obj2 = [ 'hong','44','177.5','77.7'];
+
+        // js
+        // for( i in obj2) {
+        //     document.write(' K : '+i+" ,V : " +obj2[i]+"<br>");
+        // }
+
+        // jq
+        // $.each(obj2,function(value){
+        //     document.write('K : '+key+" , V :"+obj2[key]+"<br>");
+        // })
+
+        let person = {
+            'name' : 'hong',
+            'age' : '30',
+            'major' : '컴퓨터공학',
+            'certificate' : ['정보처리기사','CCNA','COS-JAVA','리눅스마스터']
+        }
+        //  JQ -  모든속성/값 출력
+        // $.each(person,function(key,value){
+        //     document.write('K :' +key+" , V :" +person[key]+"<br>");
+        // })
+        //  JQ - 자격증만 리스트만 출력
+        $.each(person,function(key,value){
+            if(key=='certificate'){
+                cert = person[key];
+                $.each(cert,function(k,v){
+                    document.write('K : '+k+" , V :"+cert[k]+"<br>");
+                })
+            }
+            
+        })
+    </script>
+</body>
+</html>

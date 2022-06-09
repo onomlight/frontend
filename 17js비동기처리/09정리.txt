@@ -1,0 +1,35 @@
+1 출력함수
+alert , confirm , console, document.write
+2 자료형
+Number,String,Object,undefined,boolean
+3흐름제어
+if,for,while
+4함수
+
+5노드
+-조회(id,class,tagname,querySelector)
+-추가(append,appendchild,prepend,after,before)
+-삭제(remove,removechild)
+
+6이벤트
+mouse
+keyboard
+scroll
+window크기
+
+7비동기함수
+setTimeout/clearTimeout
+setInterval/cleareInterval
+
+8.내장객체
+
+9. Ajax ..
+
+10 API 처리
+
+
+
+
+
+
+

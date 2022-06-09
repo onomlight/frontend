@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQ -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <ul class="depth1">
+        <li>
+            <a href="#">MENU1</a>
+            <ul class="depth2">
+                <li><a href=#>SubMenu1</a></li>
+                <li><a href=#>SubMenu2</a></li>
+                <li><a href=#>SubMenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">MENU2</a>
+            <ul class="depth2">
+                <li><a href=#>SubMenu1</a></li>
+                <li><a href=#>SubMenu2</a></li>
+                <li><a href=#>SubMenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">MENU3</a>
+            <ul class="depth2">
+                <li><a href=#>SubMenu1</a></li>
+                <li><a href=#>SubMenu2</a></li>
+                <li><a href=#>SubMenu3</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <script>
+        $('.depth1>li>a')
+            .css('background-color','orange')
+            .css('display','block')
+            .css('width','150px')
+            .css('height','30px');
+
+            // depth2안의 모든 li들의 margin-top 2px , background-color:베이지
+            //  height:25px
+        $('.depth2>li')
+        .css('margin-top','2px')
+        .css('height','25px')
+        .css('background-color','beige');
+
+    </script>
+
+</body>
+</html>

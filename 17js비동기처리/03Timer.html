@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        p{
+            font-size:3rem;
+            font-family: '돋움체';
+            font-weight:800;
+            color:blue;
+        }
+    </style>
+    <input type="text" id="time" placeholder="시간입력">
+    <hr>
+    <p id="timer"> </p>
+
+    <script>
+
+        let time = document.getElementById('time');
+        let Worker=0;
+        time.addEventListener('keydown',function(){
+            if(event.keyCode==13) //엔터키를 입력했다면
+            {
+                totalTime=time.value; //txt에서 입력한 값(초)
+                timer = document.getElementById('timer'); //표시할 위치 객체를 받아와서 내용을 입력함
+                curtime=totalTime;  //현재 시간 
+                timer.innerHTML=curtime // 표시될 위치에 처음 시간을 표시함 
+                Worker = setInterval(function(){
+                    curtime--;
+                    if(curtime<=0){
+                        clearInterval(Worker);
+                    }
+                    timer.innerHTML=curtime;
+                },1000); // 함수가 1초단위로 실행을 하는 부분임 
+                time.value='';
+            }
+        })
+    
+
+    </script>
+</body>
+</html>

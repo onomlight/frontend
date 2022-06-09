@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div
+        {
+           width:90%;
+           height:800px;margin:10px;border : 1px solid gray;
+          font-size:2em;overflow:auto;
+          /* 오버플로워 : 스크롤바생기게 */
+        }
+    </style>
+    <div id="d1"></div>
+   
+    <script>
+        let d1 = document.getElementById('d1');
+        worker = 0;
+        document.addEventListener('keydown',function(){
+            Code = event.keyCode;
+            if(worker!=0){
+                    clearInterval(worker);
+                }
+            worker = setInterval(function(){
+              
+                d1.innerHTML+=String.fromCharCode(Code)+' ';
+            },300);
+            
+        })
+
+    </script>
+</body>
+</html>
