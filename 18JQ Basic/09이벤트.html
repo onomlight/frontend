@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQ -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <style>
+        div
+        {
+            width : 200px;height:200px ;border : 1px solid gray;
+        }
+        .triangle{
+            width: 0px;
+            height: 0px;
+            border-top:0px;
+            border-bottom: 200px solid gray;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+        }
+        .rectangle{
+            border : 1px solid gray;
+            border-radius: 0%;
+        }
+        .circle{
+            border : 1px solid gray;
+            border-radius: 50%;
+        }
+
+    </style>
+    
+    <div id="d1"></div>
+    <script>
+        // div 클릭시(삼각형표시)
+        $('#d1').on('click',()=>{
+             
+            $('#d1').removeClass('rectangle circle');
+            $('#d1').addClass('triangle');
+        })
+        // 마우스 갖다 대면 원
+        $('#d1').on('mouseover',()=>{
+            $('#d1').removeClass('triangle rectangle');
+            $('#d1').addClass('circle');
+        })
+        // 마우스 벗어나면 사각형
+        $('#d1').on('mouseleave',()=>{
+            $('#d1').removeClass('triangle circle');
+            $('#d1').addClass('rectangle');
+        })
+6
+    </script>
+
+</body>
+</html>

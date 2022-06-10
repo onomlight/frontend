@@ -37,26 +37,83 @@
         //     document.write('K : '+key+" , V :"+obj2[key]+"<br>");
         // })
 
-        let person = {
-            'name' : 'hong',
-            'age' : '30',
-            'major' : '컴퓨터공학',
-            'certificate' : ['정보처리기사','CCNA','COS-JAVA','리눅스마스터']
-        }
-        //  JQ -  모든속성/값 출력
+        // let person = {
+        //     'name' : 'hong',
+        //     'age' : '30',
+        //     'major' : '컴퓨터공학',
+        //     'certificate' : ['정보처리기사','CCNA','COS-JAVA','리눅스마스터']
+        // }
+        // //  JQ -  모든속성/값 출력
+        // // $.each(person,function(key,value){
+        // //     document.write('K :' +key+" , V :" +person[key]+"<br>");
+        // // })
+        // //  JQ - 자격증만 리스트만 출력
         // $.each(person,function(key,value){
-        //     document.write('K :' +key+" , V :" +person[key]+"<br>");
+        //     if(key=='certificate'){
+        //         cert = person[key];
+        //         $.each(cert,function(k,v){
+        //             document.write('K : '+k+" , V :"+cert[k]+"<br>");
+        //         })
+        //     }
+            
         // })
-        //  JQ - 자격증만 리스트만 출력
-        $.each(person,function(key,value){
-            if(key=='certificate'){
-                cert = person[key];
-                $.each(cert,function(k,v){
-                    document.write('K : '+k+" , V :"+cert[k]+"<br>");
+        // let emp1 = 
+        // {
+        //     'emp_id' : '10102020',
+        //     'name' : '홍길동',
+        //     'dept' : '인사부',
+        //     'title' : '대리',
+        //     'salary' : '4000',
+        //     'hobby' : ['축구','농구','탁구','등산']
+        // };
+
+        // $.each(emp1,function(key,value){
+        //     // document.write('Key : ' +key+" Value : " +value+"<br>");
+        //     if(key=='hobby'){
+        //         $.each(value,function(k,v){
+        //             document.write('Key : ' +k+" Value : " +v+"<br>");
+        //         })
+        //     }
+        // })
+
+        let building1=
+        {
+            'name' : '광개토병원',
+            '1floor' : ['바르다김밥','X-Ray검사실','주차타워'],
+            '2floor' : ['결동치과','00성형외과'],
+            '9floor' : ['코리아IT','미 한의원'],
+            '10floor' : [{'class info':'A B C'},{'A class':'리눅스서버','B class':'C언어'},{'C class ':'JAVA'}]
+        }
+
+        // buliding1안의 모든 value를 출력해보세요
+        // buliding1 안의 10floor 에 대한 정보만 출력하세요
+        // $.each(building1,function(key,value){
+        //     document.write('Key : ' +key+" Value : " +value+"<br>");
+        //     if(key == '10floor'){
+        //         $.each(value,function(k,v){
+        //             document.write('Key : ' +k+" Value : " +v+"<br>");
+        //         })
+        //     }
+              
+        // })
+        $.each(building1,function(k1,v1){
+            if(k1!='10floor'){
+                document.write('Key : '+k1+" Value : "+v1+"<br>");
+            }
+            else{
+                document.write('Key : '+k1+" Value : "+v1+"<br>");
+                $.each(v1,function(k2,v2){
+                    //document.write('Key : '+k2+" Value : "+v2+"<br>");
+                    $.each(v2,function(k3,v3){
+                        document.write('Key : '+k3+" Value : "+v3+"<br>");
+                    })
                 })
             }
             
+            
         })
+            
+        
     </script>
 </body>
 </html>
