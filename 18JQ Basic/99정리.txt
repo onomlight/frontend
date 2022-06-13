@@ -1,0 +1,16 @@
+탐색
+$(id,class,queryselector)
+
+스타일
+.css(속성,속성값)
+
+추가
+.append(태그)
+.prepend(태그)
+
+반복
+$.each(object,function(key,value){})
+
+이벤트
+.on('이벤트명',function(){})
+

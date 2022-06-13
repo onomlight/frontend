@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- JQ -->
+     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body>
+    <input type="text" id="txt">
+    <div id="d1"></div>
+    <style>
+        body{ height: 4000px;}
+
+    </style>
+
+    <script>
+        
+        // 키보드이벤트 keydown , keyup , keypress
+        // $('#txt').on('keydown',function(){
+        //     let val = event.keyCode;
+        //     console.log(val);
+        //     if(val==13) //엔터키를 쳤을경우
+        //     {   
+        //         alert($('#txt').val());
+        //     }
+        // })
+
+
+        // 스크롤이벤트 
+        // $(Document).on('scroll',function(){
+        //     console.log(document.documentElement.scrollTop);
+        // });
+
+        //  창 사이즈 이벤트
+
+        $(window).on('resize',function(){
+            console.log(window.innerWidth+"<br>");
+        })
+    </script>
+</body>
+</html>
+
