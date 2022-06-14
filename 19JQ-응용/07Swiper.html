@@ -50,9 +50,13 @@
         <!-- 버튼 div -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
     </div>
     <script>
         const swiper = new Swiper('.swiper',{
+
+            
             // 이전/이후 버튼
             // Navigation arrows
             navigation: {
@@ -64,7 +68,18 @@
                 el: '.swiper-pagination',
                 type : 'bullets', //bullets,progressbar,fraction.
             },
+            scrollbar: {  //스크롤바
+                el: '.swiper-scrollbar',
+                draggable: true, 
+            },
+            // 방향
+            direction:'horizontal', //vertical,horizontal > 수직
+            // 한번에 보여지는 페이지 수 
+            slidesPerView:1,
 
+            //  드래그 기능
+            debugger:false, //드래그
+            mousewheel:true, // 마우스 휠
         });
     </script>
 </body>
