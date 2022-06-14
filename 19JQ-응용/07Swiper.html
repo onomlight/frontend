@@ -30,7 +30,7 @@
             font-weight:900;
         } */
         .swiper-pagination>span{
-            background-color:red;
+            /* background-color:red; */
             height: 10px; width: 10px;
         }
         .swiper-pagination{
@@ -67,6 +67,7 @@
             pagination: {
                 el: '.swiper-pagination',
                 type : 'bullets', //bullets,progressbar,fraction.
+                clickable : 'true'  //클릭을하면들어가짐// 단, disableOnInteraction 가 true일 경우 멈춤
             },
             scrollbar: {  //스크롤바
                 el: '.swiper-scrollbar',
@@ -78,8 +79,18 @@
             slidesPerView:1,
 
             //  드래그 기능
-            debugger:false, //드래그
-            mousewheel:true, // 마우스 휠
+            debugger:false,
+             // 마우스 휠
+            mousewheel:true,
+            // 페이지 전환 효과
+            effect : 'fade',
+            speed : 1000, //.천분의 일
+
+            // 자동스크롤링
+            autoplay:{
+                delay:2000,
+                disableOnInteraction:false, // 마우스를 가져다되면 멈추기
+            }
         });
     </script>
 </body>
