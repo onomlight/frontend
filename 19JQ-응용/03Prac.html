@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQ -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+</head>
+<body>
+    <style>
+        #btn{
+            width:80px; height:40px;
+            background-color: cornflowerblue;
+            color:white;
+            cursor: pointer;
+            border:0px;
+            box-shadow: 4px 4px 4px gray;
+            position:relative;
+
+        }
+        #bg{display:none;}
+        #modal{display:none;}
+    </style>
+    <button id="btn">ON</button>
+    <div id="bg"></div>
+    <div id="modal"></div>
+    <!-- 
+        ON을 클릭하면 Bg가 body에 연결
+        modal창을 원하는 위치에 띄워 봅니다~
+    -->
+
+    <script>
+        zIdx=999;
+        $('#btn').on('click',function(){
+            //BG스타일
+           $('#bg').css('position','fixed')
+           .css('left','0px').css('top','0px')
+           .css('width','100%').css('height','1500px')
+           .css('background-color','lightgray')
+           .css('opacity','0.5')
+           .css('z-index',zIdx)
+           .css('display','block');
+            //btn스타일
+           $(this).css('z-index',zIdx+1);
+            //Modal창 스타일
+           $('#modal').css('position','fixed')     
+           .css('width','80%').css('height','800px')
+           .css('left','10%').css('top','10%')
+           .css('background-color','white')
+           .css('z-index',zIdx+1)
+           .css('box-shadow','12px 12px 12px lightgray')
+           .css('display','block');
+        })
+    </script>
+
+    <!-- 
+        Layout에 적용하기(같이~)
+     -->
+</body>
+</html>

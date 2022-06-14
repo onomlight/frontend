@@ -14,9 +14,11 @@
     }
     
      /* Nav */
-     nav{
+     nav
+     {
         /* height:120px; */
-    }
+        background-color:beige;
+     }
      #depth1{
          display:flex;
          /* 수평정렬 */

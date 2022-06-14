@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <!-- BS ICON -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+       <!-- JQ -->
+       <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body>
+    <style>
+        #login {width : 500px;height : 500px;background-color:white;}
+        #bg{display:none;
+            
+        }
+        @keyframes ShowLogin {
+            from{left:-500px}
+            to{left:35%;}
+        }
+    </style>
+    <button onclick="ShowLogin()">Login</button>
+    <hr>
+    <div id="bg"></div>
+    <div id="login">Login</div>
+
+
+
+
+
+
+
+    <script>
+        zIdx=999;
+        function ShowLogin(){
+            // bg 만들어서 body에 연결
+            $('#bg')
+            .css('display','block')
+            .css('position','fixed')
+            .css('left','0px').css('top','0px')
+            .css('width','100%').css('height','2000px')
+            .css('background-color','gray').css('opacity','0.3')
+            .css('z-index',zIdx)
+
+            $('btn').css('z-index',zIdx+1)
+
+
+            // login 창을 왼쪽->오른쪽 페이지 가운데로 오게 에니메이션설정
+            $('#login').css('display','block')
+            .css('position','fixed')
+            .css('left','35%').css('top','20%')
+            .css('background-color','white')
+            .css('z-index',zIdx+1)
+            .css('animation-name','ShowLogin')
+            .css('animation-duration','1.5s')
+            .css('animation-direction','alternate')
+            .css('animation-iteration-count','infinite')
+        }
+
+        $('#bg').on('click',function(){
+            $('#login').css('display','none')
+            $(this).css('display','none')
+        })
+    </script>
+</body>
+</html>
