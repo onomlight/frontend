@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- JQ -->
+     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+     <!-- 
+        Site
+        https://swiperjs.com/
+      -->
+    </head>
+<body>
+    <style>
+        img{width: 100%;}
+        ul{list-style:none;padding:0px;}
+
+        /* .swiper-button-prev{
+            color:green;
+            font-weight: 900;
+        } */
+    </style>
+    
+    <div id="container" class="swiper">
+        <ul id="banner" class="swiper-wrapper">
+            <li class="swiper-slide"><a href='#'><img src="img/banner1.jpg"></a></li>
+            <li class="swiper-slide"><a href='#'><img src="img/banner2.jpg"></a></li>
+            <li class="swiper-slide"><a href='#'><img src="img/banner3.jpg"></a></li>
+            <li class="swiper-slide"><a href='#'><img src="img/banner4.jpg"></a></li>
+        </ul>
+            <!-- 버튼 div -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper',{
+            //이전 / 이후 버튼
+              // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+        });
+    </script>
+</body>
+</html>
