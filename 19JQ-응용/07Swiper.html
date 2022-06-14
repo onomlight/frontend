@@ -18,13 +18,24 @@
     </head>
 <body>
     <style>
-        img{width: 100%;}
+        img{
+            width:100%;
+        }
         ul{list-style:none;padding:0px;}
-
+        /* .swiper{
+            width : 80%;
+        } */
         /* .swiper-button-prev{
             color:green;
-            font-weight: 900;
+            font-weight:900;
         } */
+        .swiper-pagination>span{
+            background-color:red;
+            height: 10px; width: 10px;
+        }
+        .swiper-pagination{
+            height: 50px;
+        }
     </style>
     
     <div id="container" class="swiper">
@@ -34,26 +45,26 @@
             <li class="swiper-slide"><a href='#'><img src="img/banner3.jpg"></a></li>
             <li class="swiper-slide"><a href='#'><img src="img/banner4.jpg"></a></li>
         </ul>
-            <!-- 버튼 div -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-
+        <!-- 페이지네이션 div -->
+        <div class="swiper-pagination"></div>
+        <!-- 버튼 div -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-
     <script>
         const swiper = new Swiper('.swiper',{
-            //이전 / 이후 버튼
-              // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
+            // 이전/이후 버튼
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                type : 'bullets', //bullets,progressbar,fraction.
+            },
 
-                 // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    type : 'bullsts',
-                },
         });
     </script>
 </body>
