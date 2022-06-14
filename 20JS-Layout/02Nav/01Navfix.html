@@ -30,6 +30,9 @@
     <!-- topmenu.js -->
     <script src="../JS/topmenu.js" ></script>
 
+    <!-- navfix.js -->
+    <script src="../JS/navfix.js"></script>
+
 
 </head>
 <body>
@@ -95,22 +98,7 @@
                 </ul>
             </nav>
             <script>
-                $(document).ready(function(){
-                    $(window).on('scroll',function(){
-                        scroll_top=$(this).scrollTop();
-                        console.log(scroll_top);
-                        if(scroll_top>=50){
-                            $('nav')
-                            .css('position','fixed')
-                            .css('width','100%')
-                            .css('left','0px')
-                            .css('top','0px')
-                        }else{
-                            $('nav')
-                            .css('position','relative')      
-                        }
-                    })
-                })
+               
             </script>
 
         </div> 

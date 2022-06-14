@@ -33,9 +33,28 @@
             /* background-color:red; */
             height: 10px; width: 10px;
         }
-        .swiper-pagination{
+        /* .swiper-pagination{
             height: 50px;
+        } */
+        /* 버튼모양 바꾸기 */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
         }
+        .swiper-button-next {
+            width: 100px; height: 100px;
+        background: url(./icon/images.png) no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        }
+
+        .swiper-button-prev {
+            width: 100px; height: 100px;
+        background: url(./icon/images.png) no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        }
+        
     </style>
     
     <div id="container" class="swiper">
@@ -91,6 +110,8 @@
                 delay:2000,
                 disableOnInteraction:false, // 마우스를 가져다되면 멈추기
             }
+
+            
         });
     </script>
 </body>

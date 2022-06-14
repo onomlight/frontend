@@ -2,7 +2,7 @@
     /* border : 1px solid gray;
     margin:5px; */
 }
-body:not(#nav){
+body>*{
     width:85%;
     margin:0px auto; 
     

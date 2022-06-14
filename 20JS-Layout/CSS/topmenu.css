@@ -43,7 +43,9 @@
             }
             #sitemenu{
                 position:relative;
-                margin:10px 40px 0px 10px;
+                /* margin:10px 40px 0px 10px; */
+                margin-left:5px;
+                margin-top:10px;
             }
             #sitemenu span{
               display:block;
