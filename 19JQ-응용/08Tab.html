@@ -55,13 +55,38 @@
         }
     </style>
 
+    <style>
+        #container{position: relative;}
+        #prev,#next{position: absolute; cursor: pointer;}
+        #next, #prev{
+            width: 40px; height: 40px;
+            border: 1px solid gray;
+            line-height: 40px; text-align: center;
+            border-radius: 50%;
+            background-color: white;
+        }
+       
+        #prev{
+            left: -20px;
+            top: 30px;
+        }
+        #next{
+            left: 95%;
+            top: 30px;
+        }
+        
+    </style>
+
     <div id="wrapper">
         <div id="container">
+            <div id="prev">&lt;</div>
+            <div id="next">&gt;</div>
             <div id="tabUI">
                 <ul>
                     <li class="on">Tab1</li>
                     <li>Tab2</li>
                     <li>Tab3</li>
+                    <li>Tab4</li>
                     <li>Tab4</li>
                 </ul>
             </div>
@@ -87,7 +112,29 @@
                 $('tabContents>div').eq(idx).addClass("on");
 
             })
-
+            // 클릭을했을때 이벤트 실행할수있도록 값을 설정해야함 
+            $('#prev').on("click",function(){
+                // alert("클릭함");
+                idx=$(".on").index();
+                // alert(idx);
+                if(idx-1>=0){
+                    $('#tabUI>ul li').removeClass("on");
+                    $('#tabUI>ul li').eq(idx-1).addClass("on");
+                    $('#tabContents>div').removeClass("on");
+                    $('tabContents>div').eq(idx-1).addClass("on");
+                }
+            })
+            $('#next').on("click",function(){
+                idx=$(".on").index();
+                end=$("#tabUI>ul li").length-1;
+                // alert(end)
+                if(idx+1<=end){
+                    $('#tabUI>ul li').removeClass("on");
+                    $('#tabUI>ul li').eq(idx+1).addClass("on");
+                    $('#tabContents>div').removeClass("on");
+                    $('tabContents>div').eq(idx+1).addClass("on");
+                }
+            })
         });
     </script>
 </body>

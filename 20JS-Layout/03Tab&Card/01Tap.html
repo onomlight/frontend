@@ -37,8 +37,9 @@
    
    <!-- navfix.js -->
    <script src="../JS/navfix.js" ></script>
-
-   <script src="../JS/banner.js"></script>
+   
+   <!-- banner.js -->
+   <script src="../JS/banner.js" ></script>
 
 </head>
 <body>
@@ -110,11 +111,6 @@
         <!-- contents.. -->
 
         <div id="main-container">
-            
-
-            <style>
-               
-            </style>
             <!-- banner slider -->
             <div id="banner-slider"  class="swiper">
                 <ul  class="swiper-wrapper">
@@ -132,16 +128,159 @@
                     <!-- scrollbar -->
                     <div class="swiper-scrollbar"></div>
             </div>
+  
+            
+            
+            
+            <!-- tab -->
+
+            <style>
+                ul{list-style:none;padding:0px;}
+                #container{
+                    width : 700px;
+                    height : 600px;
+                    /* border : 1px solid gray; */
+                    margin-top:50px;
+                    /* margin : 100px auto; */
+                    padding : 10px;
+                    position : relative;  
+                    box-shadow: 5px 5px 15px lightgray;  
+                }
+                #tabUI>ul{
+                    display:flex;
+                    justify-content: space-around;
+                    position:relative;
+                }
+                #tabUI li{
+                    width : 120px;
+                    height:50px;
+                    line-height:50px;
+                    text-align:center;
+                    /* border : 1px solid gray; */
+                    min-width: 120px;
+                    position:relative;    
+                    box-shadow: 2px 2px 2px lightgray;    
+                }
+                #tabContents{
+                    border : 1px solid lightgray;
+                    height :82%;
+                    
+                }
+                #tabContents div{
+                    display:none;
+                }
+                #tabUI .on{
+                    background-color:orange;
+                }
+                #tabContents .on{
+                    display:block;
+                }
+                #container{position:relative;}
+                #prev,#next{position:absolute; cursor:pointer;}
+                #prev,#next
+                {
+                    width:40px;height:40px;
+                    /* border : 1px solid gray; */
+                    box-shadow: 3px 3px 3px lightgray; 
+                    line-height:40px;text-align:center;
+                    border-radius: 50%;
+                    background-color:white;
+                    z-index:2;
+                   
+                }
+                #prev{
+                    left:-20px;
+                    top:15px;
+                }
+                #next{
+                    left:95%;
+                    top:15px;
+                }
+            </style>
+            <div id="tab">
+                <div id="container">
+                    <div id="prev">&lt;</div>
+                    <div id="next">&gt;</div>
+                    <div id="tabUI">
+                        <ul> 
+                            <li class="on">Tab1</li>
+                            <li>Tab2</li>
+                            <li>Tab3</li>
+                            <li>Tab4</li>
+                            <li>Tab5</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="tabContents">
+                        <div class="on">Tab1 Content</div>
+                        <div>Tab2 Content</div>
+                        <div>Tab3 Content</div>
+                        <div>Tab4 Content</div>   
+                        <div>Tab5 Content</div>  
+                    </div>
+                </div>
+                
+                <div id="pdcontainer">
+
+                </div>
+            </div>   <!-- 컨테이너 끝 -->
+            
+
             <script>
-               
+                $(document).ready(function(){
+                    $("#tabUI>ul li").on('click',function(){
+                        // alert($(this).html()+"!");
+                        //alert($(this).index());
+                        idx = $(this).index();
+        
+                        $('#tabUI>ul li').removeClass("on");
+                        $('#tabUI>ul li').eq(idx).addClass("on");     
+                        $('#tabContents>div').removeClass("on");
+                        $('#tabContents>div').eq(idx).addClass("on");
+        
+                    })
+        
+                    $('#prev').on("click",function(){
+                        // alert("클릭함");
+                        idx=$(".on").index();
+                        // alert(idx);
+                        if(idx-1>=0)
+                        {
+                            $('#tabUI>ul li').removeClass("on");
+                            $('#tabUI>ul li').eq(idx-1).addClass("on");     
+                            $('#tabContents>div').removeClass("on");
+                            $('#tabContents>div').eq(idx-1).addClass("on");
+                        }
+                    })
+        
+                    $('#next').on("click",function(){    
+                        idx=$(".on").index();  
+                        end=$("#tabUI>ul li").length-1;  
+                       
+                        if(idx+1<=end)
+                        {
+                            $('#tabUI>ul li').removeClass("on");
+                            $('#tabUI>ul li').eq(idx+1).addClass("on");     
+                            $('#tabContents>div').removeClass("on");
+                            $('#tabContents>div').eq(idx+1).addClass("on");
+                        }
+        
+                    })
+        
+                });
             </script>
-            
-            
-            
-            <!-- Tab   -->
-            <div id="tab"></div>
+
+
+
+
+
+
+
+
             <!-- card -->
-            <div id="cards"></div>
+            <div id="cards">
+                
+            </div>
             <!--item slider -->
             <div id="item-slider"></div>
 
